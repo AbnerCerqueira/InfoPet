@@ -1,13 +1,46 @@
-.nav-wrapper {
-    box-shadow: none;
+#logo {
+    position: relative;
 }
 
+/* navbar */
+.nav-wrapper {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.102);
+    height: 100px;
+}
+
+.nav-cont {
+    width: 85%;
+    margin: auto;
+}
+
+nav ul {
+    margin-top: 12px;
+}
+
+nav ul li {
+    border-radius: 5px;
+}
+
+nav ul li a {
+    color: black;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: #F489DD;
+}
+
+/* corpo */
 .row {
     margin-top: 60px;
 }
 
-nav ul li:hover {
-    border-color: red;
+.container {
+    width: 80%;
 }
 
 /* efeito de quando clica na seta */
@@ -46,4 +79,11 @@ a.middle-indicator-text {
 
 .indicator-item.active {
     background-color: #f489dd92 !important;
+}
+
+/* texto dentro do carrosel */
+.texto {
+    width: 80%;
+    margin: auto;
+    margin-top: 20%;
 }

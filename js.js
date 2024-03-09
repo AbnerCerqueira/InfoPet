@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.carousel.carousel-slider');
-    var instance = M.Carousel.init(elems, ({
+    var carrosel = document.querySelectorAll('.carousel.carousel-slider');
+    var instance = M.Carousel.init(carrosel, ({
         fullWidth: true,
         indicators: true,
         duration: 200
@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     var move_prev = document.querySelector('.movePrevCarousel');
     move_prev.addEventListener('click', function(){
-        carousel_instance.prev();
+        carousel_instance.prev(1);
     })
   });
