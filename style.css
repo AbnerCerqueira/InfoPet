@@ -6,35 +6,26 @@
     margin-top: 60px;
 }
 
-/* setas config dos icons */
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: 'liga';
-    -moz-osx-font-smoothing: grayscale;
+nav ul li:hover {
+    border-color: red;
 }
+
 /* efeito de quando clica na seta */
-.waves-effect.waves-light .waves-ripple{
+.waves-effect.waves-light .waves-ripple {
     background-color: #f489dd54 !important;
 }
+
 /* setas do carrosel */
 .middle-indicator {
     position: absolute;
     top: 50%;
 }
-.middle-indicator-text{
+
+.middle-indicator-text {
     display: flex;
     align-items: center;
 }
+
 a.middle-indicator-text {
     color: black !important;
 }
