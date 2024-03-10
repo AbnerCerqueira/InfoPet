@@ -1,0 +1,61 @@
+
+#logo {
+    position: relative;
+}
+
+/* navbar */
+.nav-wrapper {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.102);
+    height: 100px;
+}
+
+.nav-cont {
+    width: 85%;
+    margin: auto;
+}
+
+nav ul {
+    margin-top: 12px;
+}
+
+nav ul li {
+    border-radius: 5px;
+}
+
+nav ul li a {
+    color: black;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: #F489DD;
+}
+
+.container{
+    width: 80%;
+}
+.divconteudo{
+    background-color: rgba(255, 255, 255, 0.9);
+    width:35%;
+    height:auto;
+    border-radius:6px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 8px black;
+}
+.btnlogin{
+    width:100%;
+}
+.btncadastro{
+    width:100%;
+    margin-top:15px;
+}
+.divlogin{
+    margin-top:30px;
+}
+.divbtn{
+    margin-top: 10px;
+}

@@ -1,0 +1,63 @@
+<link href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+        <!--Icones-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- CSS-login-->
+        <link rel="stylesheet" href="css/cadastro.css">
+        <title>InfoPet</title>
+    </head>
+  
+
+<body>
+    <div class="container">
+        <header>
+            <!-- navbar -->
+            <nav class="nav-wrapper transparent">
+                <div class="nav-cont">
+                    <a href="index.html" id="logo">
+                        <img src="img/logo-brinquedo.svg" alt="logo" height="280px">
+                    </a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                        <li><a href="login.html">Entrar</a></li>
+                        <li><a href="cadastro.html">Cadastrar</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /navbar -->
+        </header>
+
+        <h4 class="center white-text loginh4">Login</h4>
+        <div class="row divlogin">
+            <div class="col s10 m6 l4 offset-s1 offset-m3 offset-l4 divconteudo">               
+                    <div class="input-field col s12 formmg" style="margin-top: 45px; margin-bottom:0px">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input id="icon_prefix" name="login" type="text" class="validate" required minlength="5" placeholder="Login">
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="icon_prefix2" type="password" name="senha" class="validate" required minlength="6" placeholder="Senha">
+                    </div>                   
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <input id="icon_prefix2" type="password" name="Confsenha" class="validate" required minlength="6" placeholder="Confirmar Senha">
+                    </div>                   
+                    <div class="input-field col s12 divbt">
+                        <button class="waves-effect waves-light btn pink accent-2 btnlogin" type="button" name="bt-send">Cadastrar-se</button>
+                        <a href="login.html" class="waves-effect waves-light btn grey btncadastro" >Já possuo uma conta</a>
+                    </div>
+            </div>
+        </div>   
+    </div>
+</body>
+</html>
+        
