@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- css style.css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/componentes/header.css">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoPet</title>
+</head>
+
+<body class="container">
+    <header>
+        <!-- navbar -->
+        <nav class="nav-wrapper transparent">
+            <div class="nav-cont">
+                <a href="/" id="logo">
+                    <img src="img/logo-completo.svg" alt="logo" height="65px">
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="/login">Entrar</a></li>
+                    <li><a href="/cadastro">Cadastrar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /navbar -->
+    </header>
+    <!-- main -->
+    <main>
+        <section>
+            <!-- row(linha) -->
+            <div class="row valign-wrapper">
+                <div class="col s6"><img src="img/gato.png" alt="" srcset=""></div>
+                <div class="col s6">
+                    <!-- carrosel -->
+                    <div class="carousel carousel-slider center ">
+                        <!-- setas -->
+                        <div class="carousel-fixed-item middle-indicator">
+                            <div class="left">
+                                <a href="#"
+                                    class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator">
+                                    <i class="material-icons left">chevron_left</i>
+                                </a>
+                            </div>
+
+                            <div class="right">
+                                <a href="#"
+                                    class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator">
+                                    <i class="material-icons right">chevron_right</i>
+                                </a>
+                            </div>
+                            <!-- /setas -->
+                        </div>
+                        <!-- conteudo -->
+                        <div class="carousel-item transparent" href="#one!">
+                            <h2>Carteira Digital</h2>
+                            <p class="texto">
+                                A InfoPet é a sua solução completa para guardar todas as informações importantes sobre os seus companheiros.
+                            </p>
+                        </div>
+                        <div class="carousel-item" href="#two!">
+                            <h2>Organização</h2>
+                            <p class="texto">
+                                Com a InfoPet, você nunca mais perderá uma data importante de vacinação ou consulta veterinária.
+                            </p>
+                        </div>
+                        <div class="carousel-item" href="#three!">
+                            <h2>Muitas possibilidades</h2>
+                            <p class="texto">
+                                Adicione fotos, notas e detalhes personalizados para cada um dos seus pets, criando registros memoráveis e divertidos.
+                            </p>
+                        </div>
+                        <div class="carousel-item" href="#four!">
+                            <h2>Skins</h2>
+                            <p class="texto">
+                                Personalize seus cards, com molduras exclusivas e empolgantes. Você ganhar alguns de graça conforme for usando.
+                            </p>
+                        </div>
+                        <!-- /conteudo -->
+                    </div>
+                    <!-- /carrosel -->
+                </div>
+                <!-- /row(linha) -->
+        </section>
+    </main>
+    <!-- /main -->
+
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/js.js"></script>
+</body>
+
+</html>
