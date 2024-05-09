@@ -21,7 +21,7 @@ function getUserById(id, callback) {
 }
 
 function getUserByLoginPass(login, senha, callback) {
-  connection.query('SELECT * FROM user WHERE login = ? AND senha = ?', [login, senha], (error, results, fields) => {
+  connection.query('SELECT id, login FROM user WHERE login = ? AND senha = ?', [login, senha], (error, results, fields) => {
     if (error) {
       callback(error, null)
       return
