@@ -46,14 +46,19 @@ app.post("/cadastro", (req, res) => {
         login: body.loginInput,
         senha: body.senhaInput
     }
-    userDao.addUser(user, () => { })
+    userDao.addUser(user, (error) => {
+        if (error) {
+            res.redirect("/cadastro?error=error")
+            return
+        }
+    })
     res.redirect("/login")
 })
 
 app.post("/login", (req, res) => {
     const body = req.body
     userDao.getUserByLoginPass(body.loginInput, body.senhaInput, (error, results) => {
-        if (!results.length) {
+        if (!results.length || error) {
             res.redirect("/login?error=error")
             return
         }
