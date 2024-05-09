@@ -19,6 +19,16 @@ function getUserById(id, callback) {
     callback(null, results[0])
   })
 }
+
+function getUserByLoginPass(login, senha, callback) {
+  connection.query('SELECT * FROM user WHERE login = ? AND senha = ?', [login, senha], (error, results, fields) => {
+    if (error) {
+      callback(error, null)
+      return
+    }
+    callback(null, results)
+  })
+}
  
 function addUser(user, callback) {
   connection.query('INSERT INTO user SET ?', user, (error, results, fields) => {
@@ -53,6 +63,7 @@ function deleteUser(id, callback) {
 module.exports = {
   getAllUsers,
   getUserById,
+  getUserByLoginPass,
   addUser,
   updateUser,
   deleteUser
