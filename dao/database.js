@@ -1,10 +1,10 @@
 const mysql = require('mysql2');
  
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'infopet'
+  host: process.env.SQL_HOST,
+  user: process.env.SQL_USER,
+  password: process.env.SQL_PASSWORD,
+  database: process.env.SQL_DATABASE
 });
  
 connection.connect((err) => {
