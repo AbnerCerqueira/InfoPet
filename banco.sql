@@ -1,4 +1,3 @@
--- Active: 1715288619464@@127.0.0.1@3306@banco
 create database infopet;
 
 use infopet;
