@@ -11,3 +11,5 @@ senha varchar(30) not null
 insert into user(login,senha) values("adm","adm123");
 
 select * from user;
+
+delete from user;
