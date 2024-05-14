@@ -4,6 +4,10 @@ body{
     
 }
 
+#user-icon {
+    margin-top: 15px;
+}
+
 .container {
     height: 83vh ;
 }
