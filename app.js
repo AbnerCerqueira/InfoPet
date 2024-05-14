@@ -13,8 +13,10 @@ app.use(session({
 }))
 
 const index = require('./routes/index')
+const user = require('./routes/user')
 
 app.use('/', index)
+app.use('/user', user)
 
 app.use(express.static('public'))
 

@@ -6,9 +6,14 @@ router.use((req, res, next) => {
     next()
 })
 
+router.get("/", (req, res) => {
+    res.render("index.ejs")
+
+})
+
 router.get("/cadastro", (req, res) => {
     res.render("cadastro.ejs", {
-        error: req.query.error
+        error: req.query
     })
 })
 
