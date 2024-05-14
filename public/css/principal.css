@@ -1,0 +1,74 @@
+body{
+    background-image: url('../img/fundo-principal.jpg');
+    background-size: cover;
+    
+}
+
+.container {
+    height: 83vh ;
+}
+
+.btnregistrar{
+    background-color: #F489DD !important;
+    border-radius: 25px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+.textpet{
+    font-size: 25px;
+    color: gray;
+}
+
+.cartao {
+    background-color: #F489DD;
+    width: 250px;
+    height: 450px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.nomepet,
+.fotopet,
+.info,
+.botoes {
+    margin: 10px 0;
+}
+
+.nomepet{
+    font-size: 25px;
+}
+.fotopet {
+    background-image: url('../img/logo.svg');
+    background-color: white;
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+
+    border: 3px solid black;
+}
+
+.info {
+    text-align: left; 
+    width: 100%; 
+    padding-left: 50px ;
+}
+
+.info p {
+    margin: 5px 0; 
+}
+
+.btnpet{
+    background-color: #F489DD !important;
+    border: 1px solid black;
+    width: 200px;
+    border-radius: 10px;
+    margin: 5px 0px;
+}
+
