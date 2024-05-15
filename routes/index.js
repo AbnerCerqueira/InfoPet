@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 
 router.get("/cadastro", (req, res) => {
     res.render("cadastro.ejs", {
-        error: req.query
+        error: req.query.error
     })
 })
 
