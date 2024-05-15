@@ -1,6 +1,8 @@
 # Tutorial
 1. Entre no terminal, use `git clone https://github.com/AbnerCerqueira/InfoPet.git`, entre na pasta `cd InfoPet/` e execute `npm install`, isso vai fazer com que o npm leia o `package.json` e instale as dependências necessárias para o funcionamento do site.
-2. Inicie o servidor MySQL na sua máquina e **crie um arquivo chamado** `.env` dentro da **pasta do projeto**, nele atribua às environment variables os dados de acordo com a configuração do MySQL da sua máquina, exemplo:
+2. Inicie o servidor MySQL na sua máquina e **crie um arquivo chamado** `.env` dentro da **pasta do projeto**:
+![image](https://github.com/AbnerCerqueira/InfoPet/assets/102826252/287fcc66-3c12-44b2-944e-1b8495c32af5) ![image](https://github.com/AbnerCerqueira/InfoPet/assets/102826252/a708f335-8bef-4b1b-a16a-b3f809882b0f) <br>
+nele atribua às environment variables os dados de acordo com a configuração do MySQL da sua máquina, exemplo:
 ```
 MYSQL_HOST = 'localhost'
 MYSQL_USER = 'root'
