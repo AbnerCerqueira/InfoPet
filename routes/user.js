@@ -11,7 +11,14 @@ router.get("/:username", (req, res) => {
         return
     }
     const username = req.params.username
-    res.render("principal.ejs")
+    res.render("principal.ejs", {
+        user: req.session.user
+    })
+})
+
+router.get("/:username/deslogar", (req, res) => {
+    req.session.destroy()
+    res.redirect('/')
 })
 
 module.exports = router

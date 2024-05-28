@@ -1,5 +1,5 @@
 const express = require('express')
-const userDao = require('../dao/user-dao')
+const userDao = require('../data/user-dao')
 const router = express.Router()
 
 router.use((req, res, next) => {
@@ -7,8 +7,9 @@ router.use((req, res, next) => {
 })
 
 router.get("/", (req, res) => {
-    res.render("index.ejs")
-
+    res.render("index.ejs", {
+        user: req.session.user
+    })
 })
 
 router.get("/cadastro", (req, res) => {
@@ -55,7 +56,7 @@ router.post("/login", (req, res) => {
             return
         }
         req.session.user = {
-            id: results.id,
+            id: results[0].id,
             login: results[0].login
         }
         res.redirect(`/user/${req.session.user.login}`)

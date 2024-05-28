@@ -27,9 +27,12 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Sobre nós</a></li>
+                    <% if (user) { %>
+                    <li><a href="/user/<%=user.login%>"><img src="/img/user-icon.svg" alt="" srcset="" height="45px" id="user-icon"></a></li>
+                    <% } else { %>
                     <li><a href="/login">Entrar</a></li>
                     <li><a href="/cadastro">Cadastrar</a></li>
-                    
+                    <% } %>
                 </ul>
             </div>
         </nav>
