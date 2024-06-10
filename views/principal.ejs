@@ -32,8 +32,8 @@
                         <img src="/img/user-icon.svg" alt="" srcset="" height="45px" id="user-icon">
                     </li>
                     <li>
-                        <form action="">
-                            <input type="hidden" value="">
+                        <form action="/user/<%=user.login%>/deslogar">
+                            <input type="hidden" value="<%= user.id %>">
                             <button type="submit" style="background-color: transparent; border: none; cursor: pointer;">Deslogar</button>
                         </form>
                     </li>
