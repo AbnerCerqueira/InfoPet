@@ -1,0 +1,49 @@
+body {
+    background-image: url('../img/fundo-principal.jpg');
+    background-size: cover;
+}
+@font-face {
+    font-family: 'FonteCard';
+    src: url('../fonts/londrina/LondrinaSolid-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titulos{
+    font-family: 'FonteCard','Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+.principal{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.principal > h1{  
+    font-size: 40px;
+}
+
+.formpet > form > input::placeholder{
+    color: black;
+}
+
+.formpet{
+    width: 60%;
+}
+
+.formpet > form >  h2{
+    font-size: 35px;
+}
+
+.btn {
+    background-color: #F489DD !important;
+    border-radius: 10px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 10px;
+}

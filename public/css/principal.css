@@ -1,7 +1,13 @@
-body{
+body {
     background-image: url('../img/fundo-principal.jpg');
     background-size: cover;
-    
+}
+
+@font-face {
+    font-family: 'FonteCard';
+    src: url('../fonts/londrina/LondrinaSolid-Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 #user-icon {
@@ -9,70 +15,176 @@ body{
 }
 
 .container {
-    height: 83vh ;
+    min-height: 83vh;
 }
 
-.btnregistrar{
+.btnregistrar {
     background-color: #F489DD !important;
     border-radius: 25px;
     width: 200px;
     border: 1px solid black;
 }
 
-.textpet{
+.textpet {
     font-size: 25px;
     color: gray;
 }
+/* ________________________________________________________________________________ */
 
-.cartao {
-    background-color: #F489DD;
-    width: 250px;
-    height: 450px;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.titlePet{
+    font-family: 'FonteCard', 'Courier New', Courier, monospace;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        color: white;
+}
 
+.card-container {
+    font-family: 'FonteCard', 'Courier New', Courier, monospace;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-size: 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 40px 0;
+    min-width: 800px;
+}
+
+.card {
+    background-color: #F59EE6;
     border-radius: 10px;
+    padding: 20px;
+    width: calc(25% - 20px); 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px; 
+    box-sizing: border-box; 
     border: 1px solid black;
 }
 
-.nomepet,
-.fotopet,
-.info,
-.botoes {
-    margin: 10px 0;
-}
 
-.nomepet{
-    font-size: 25px;
-}
-.fotopet {
-    background-image: url('../img/logo.svg');
-    background-color: white;
+.card .fotopet {
+    width: 80px;
+    height: 80px;
+    background-color: #b60808;
     border-radius: 50%;
-    width: 125px;
-    height: 125px;
-    margin: 0 auto;
+    margin: 10px auto 20px; 
+    border: 2px solid black;
 
-    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-.info {
-    text-align: left; 
-    width: 100%; 
-    padding-left: 50px ;
+.card h2 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 30px;
 }
 
-.info p {
-    margin: 5px 0; 
+.card p {
+    margin-bottom: 10px;
+    color: #fff;
 }
 
-.btnpet{
-    background-color: #F489DD !important;
+.card button {
+    font-family: 'FonteCard', 'Courier New', Courier, monospace;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        
+    background-color: #ffffff00;
     border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+/* __________________________________________________________________________________ */
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.conteudoPets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardsPets{
+    display: flex;
+    gap: 20px;
+}
+/* ___________________________________________________________________ */
+.cardFrente{
+    background-color: #F59EE6;
+    border: 1px solid black;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardFrenteFoto {
+    border-radius: 25px;
+    background-color: #000;
+    overflow: hidden;
     width: 200px;
-    border-radius: 10px;
-    margin: 5px 0px;
+    height: 350px;
+    position: relative; 
+}
+
+.NomeFoto {
+    position: absolute; 
+    left: 10px; 
+}
+
+.IdadeFoto {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+}
+
+/* ___________________________________________________________________ */
+.cardVerso{
+    background-color: #F59EE6;    
+    width: 250px;
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.InfosVerso{
+    background-color: #742E68;
+    width: 90%;
+    height: 95%;
+    text-align: left;
+    box-shadow: inset 0 0 10px #000000;
+}
+.InfosVerso > p{
+    margin: 0px;
+    padding-left: 20px;
+}
+
+/* ______________________________________________________________________ */
+
+.botaofechar{
+    width: 100px;
 }
 

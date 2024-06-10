@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- css style.css -->
+    <link rel="stylesheet" href="/css/cadastro-pets.css">
+    <link rel="stylesheet" href="/css/componentes/header.css">
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principal</title>
+</head>
+
+<body class="container">
+    <header>
+        <!-- navbar -->
+        <nav class="nav-wrapper transparent">
+            <div class="nav-cont">
+
+                <a href="/" id="logo">
+                    <img src="/img/logo-completo.svg" alt="logo" height="65px">
+                </a>
+
+
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <img src="/img/user-icon.svg" alt="" srcset="" height="45px" id="user-icon">
+                    </li>
+                    <li>
+                        <form action="/user/<%=user.login%>/deslogar">
+                            <input type="hidden" value="<%= user.id %>">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; cursor: pointer;">Deslogar</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /navbar -->
+    </header>
+
+
+    <main class="principal">
+        <h1 class="titulos">CADASTRE SEU PET</h1>
+        <div class="formpet">
+            <form action="">
+                <input type="text" name="nome" id="" placeholder="Nome">
+                <input type="text" name="especie" id="" placeholder="Especie">
+                <input type="text" name="raca" id="" placeholder="Raça">
+                <input type="text" name="cor" id="" placeholder="Cor">
+                <input type="text" name="idade" id="" placeholder="Idade">
+
+                <label>SEXO</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>Escolha o sexo</option>
+                    <option value="macho">Macho</option>
+                    <option value="femea">Femea</option>
+                </select>
+
+                <input type="text" name="peso" id="" placeholder="Peso">
+                <input type="text" name="alergia" id="" placeholder="Alergia">
+                <input type="text" name="medicamento" id="" placeholder="Medicamento">
+                <input type="text" name="vacina" id="" placeholder="Vacina">
+
+                <h2 class="titulos">Informações do dono</h2>
+
+                <input type="text" name="nomedono" id="" placeholder="Nome do dono">
+                <input type="text" name="telefone" id="" placeholder="Telefone">
+                <input type="text" name="endereco" id="" placeholder="Endereco">
+                <input type="text" name="cidade" id="" placeholder="Cidade">
+                <input type="text" name="cep" id="" placeholder="CEP">
+
+                <input type="submit" value="CADASTRAR" class="btn">
+            </form>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
