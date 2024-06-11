@@ -1,5 +1,5 @@
 const express = require('express')
-const userDao = require('../data/user-dao')
+const userDao = require('../database/user-dao')
 const router = express.Router()
 
 router.use((req, res, next) => {
@@ -14,30 +14,32 @@ router.get("/", (req, res) => {
 
 router.get("/cadastro", (req, res) => {
     res.render("cadastro.ejs", {
-        error: req.query.error
+        error: req.query.error,
+        user: req.session.user
     })
 })
 
 router.get("/login", (req, res) => {
     res.render("login.ejs", {
-        error: req.query.error
+        error: req.query.error,
+        user: req.session.user
     })
 })
 
 // POST
 router.post("/cadastro", (req, res) => {
-    const body = req.body
-    if (!body.loginInput || !body.senhaInput) {
+    const {usernameInput, senhaInput, confSenhaInput} = req.body
+    if (!usernameInput || !senhaInput) {
         res.redirect("/cadastro?error=error")
         return
     }
-    if (body.senhaInput !== body.confSenhaInput) {
+    if (senhaInput !== confSenhaInput) {
         res.redirect("/cadastro?error=error")
         return
     }
     const user = {
-        login: body.loginInput,
-        senha: body.senhaInput
+        username: usernameInput,
+        senha: senhaInput
     }
     userDao.addUser(user, (error) => {
         if (error) {
@@ -49,17 +51,17 @@ router.post("/cadastro", (req, res) => {
 })
 
 router.post("/login", (req, res) => {
-    const body = req.body
-    userDao.getUserByLoginPass(body.loginInput, body.senhaInput, (error, results) => {
+    const { usernameInput, senhaInput } = req.body
+    userDao.getUserByLoginPass(usernameInput, senhaInput, (error, results) => {
         if (!results.length || error) {
             res.redirect("/login?error=error")
             return
         }
         req.session.user = {
-            id: results[0].id,
-            login: results[0].login
+            id: results[0].id_user,
+            username: results[0].username
         }
-        res.redirect(`/user/${req.session.user.login}`)
+        res.redirect(`/user/${req.session.user.username}`)
     })
 })
 

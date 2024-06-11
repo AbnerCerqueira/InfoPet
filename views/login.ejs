@@ -16,23 +16,7 @@
 
 <body>
     <div class="container">
-        <header>
-            <!-- navbar -->
-            <nav class="nav-wrapper transparent">
-                <div class="nav-cont">
-                    <a href="/" id="logo">
-                        <img src="img/logo-completo.svg" alt="logo" height="65px">
-                    </a>
-                    <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Sobre nós</a></li>
-                        <li><a href=" /login">Entrar</a></li>
-                        <li><a href="/cadastro">Cadastrar</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- /navbar -->
-        </header>
+        <%- include ('partials/header') %>
 
         <h4 class="center white-text loginh4">Login</h4>
         <div class="row divlogin ">
@@ -40,12 +24,12 @@
                 <div class="col s10 m6 l4 offset-s1 offset-m3 offset-l4 divconteudo">
                     <div class="input-field col s12 formmg" style="margin-top: 45px; margin-bottom:0px">
                         <i class="material-icons prefix">account_circle</i>
-                        <input id="icon_prefix" name="loginInput" type="text" class="validate" required minlength="5"
-                            placeholder="Login">
+                        <input id="icon_prefix" name="usernameInput" type="text" class="validate" required minlength="5"
+                            placeholder="Login" autofocus>
                     </div>
                     <div class="input-field col s12">
                         <i class="material-icons prefix">lock_outline</i>
-                        <input id="icon_prefix2" type="password" name="senhaInput" class="validate" required minlength="6"
+                        <input id="icon_prefix2" type="password" name="senhaInput" class="validate" required minlength=""
                             placeholder="Senha">
                     </div>
                     <div class="center">

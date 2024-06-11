@@ -17,38 +17,12 @@
 </head>
 
 <body class="container">
-    <header>
-        <!-- navbar -->
-        <nav class="nav-wrapper transparent">
-            <div class="nav-cont">
-
-                <a href="/" id="logo">
-                    <img src="/img/logo-completo.svg" alt="logo" height="65px">
-                </a>
-
-
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <img src="/img/user-icon.svg" alt="" srcset="" height="45px" id="user-icon">
-                    </li>
-                    <li>
-                        <form action="/user/<%=user.login%>/deslogar">
-                            <input type="hidden" value="<%= user.id %>">
-                            <button type="submit"
-                                style="background-color: transparent; border: none; cursor: pointer;">Deslogar</button>
-                        </form>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <!-- /navbar -->
-    </header>
-
+    <%- include ('partials/header') %>
 
     <main class="principal">
-        <h1 class="titulos">CADASTRE SEU PET</h1>
+        <h1 class="titulos">Cadastre seu Pet</h1>
         <div class="formpet">
-            <form action="">
+            <form action="/user/<%=user.username%>/cadastro-pet/adicionar-dados" method="post" enctype="multipart/form-data">
                 <h5 class="titulos">Foto do seu pet</h5>
                 <input type="file" name="foto" id="">
                 <br><br>
@@ -78,7 +52,7 @@
                 <input type="text" name="cidade" id="" placeholder="Cidade">
                 <input type="text" name="cep" id="" placeholder="CEP">
 
-                <input type="submit" value="CADASTRAR" class="btn">
+                <input type="submit" class="btn">
             </form>
         </div>
     </main>
